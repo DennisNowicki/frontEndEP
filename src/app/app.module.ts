@@ -21,15 +21,15 @@ const routes: Routes = [
   { path: 'login' , component: LoginComponent}
   ];
 
-  const config = {
-    apiKey: "AIzaSyAp0PvD5tcTHy4CvP1DcKjFerYbi1INLSY",
-    authDomain: "frontendep.firebaseapp.com",
-    databaseURL: "https://frontendep.firebaseio.com",
-    projectId: "frontendep",
-    storageBucket: "frontendep.appspot.com",
-    messagingSenderId: "195857084939",
-    appId: "1:195857084939:web:d59eeb4aeaaad105c50d0e"
-  };
+const config = {
+  apiKey: "AIzaSyAp0PvD5tcTHy4CvP1DcKjFerYbi1INLSY",
+  authDomain: "frontendep.firebaseapp.com",
+  databaseURL: "https://frontendep.firebaseio.com",
+  projectId: "frontendep",
+  storageBucket: "frontendep.appspot.com",
+  messagingSenderId: "195857084939",
+  appId: "1:195857084939:web:d59eeb4aeaaad105c50d0e"
+};
 
 @NgModule({
   declarations: [
