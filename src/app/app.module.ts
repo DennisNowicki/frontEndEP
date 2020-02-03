@@ -9,12 +9,27 @@ import { BuilderComponent } from './builder/builder.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ContactComponent } from './contact/contact.component';
 
+import { AngularFireModule } from "@angular/fire";
+import { AngularFireAuthModule } from "@angular/fire/auth";
+import { LoginComponent } from './admin/login/login.component';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
   { path: 'builder', component: BuilderComponent},
-  { path: 'contact', component: ContactComponent}
+  { path: 'contact', component: ContactComponent},
+  { path: 'login' , component: LoginComponent}
   ];
+
+  const config = {
+    apiKey: "AIzaSyAp0PvD5tcTHy4CvP1DcKjFerYbi1INLSY",
+    authDomain: "frontendep.firebaseapp.com",
+    databaseURL: "https://frontendep.firebaseio.com",
+    projectId: "frontendep",
+    storageBucket: "frontendep.appspot.com",
+    messagingSenderId: "195857084939",
+    appId: "1:195857084939:web:d59eeb4aeaaad105c50d0e"
+  };
 
 @NgModule({
   declarations: [
@@ -22,9 +37,12 @@ const routes: Routes = [
     HomeComponent,
     BuilderComponent,
     NavbarComponent,
-    ContactComponent
+    ContactComponent,
+    LoginComponent
   ],
   imports: [
+    AngularFireModule.initializeApp(config),
+    AngularFireAuthModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes)
