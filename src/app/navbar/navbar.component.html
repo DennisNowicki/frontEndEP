@@ -10,9 +10,8 @@
       <a routerLink="contact" class="nav-item nav-link">contact</a>
     </div>
     <div class="navbar-nav ml-auto">
-      <button class="btn btn-primary" *ngIf="authService.isLoggedIn == false" routerLink="login">Login</button>
+      <button class="btn btn-primary" *ngIf="!authService.isLoggedIn" routerLink="login">Login</button>
       <button class="btn btn-warning" *ngIf="authService.isLoggedIn" (click)="authService.logout()">Logout</button>
     </div>
-
   </div>
 </nav>
