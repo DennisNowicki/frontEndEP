@@ -8,12 +8,11 @@
       <a routerLink="home" class="nav-item nav-link">home</a>
       <a routerLink="builder" class="nav-item nav-link">Builder</a>
       <a routerLink="contact" class="nav-item nav-link">contact</a>
+    </div>
+    <div class="navbar-nav ml-auto">
+      <button class="btn btn-primary" *ngIf="authService.isLoggedIn == false" routerLink="login">Login</button>
+      <button class="btn btn-warning" *ngIf="authService.isLoggedIn" (click)="authService.logout()">Logout</button>
+    </div>
 
-      <div class="container-fluid ml-auto">
-        <button class="btn btn-primary" routerLink="login">Login</button>
-        <button class="btn btn-warning" *ngIf="authService.isLoggedIn" (click)="authService.logout()">Logout</button>
-      </div>
-
-     </div>
   </div>
 </nav>

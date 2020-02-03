@@ -31,22 +31,22 @@ export class AuthService {
       await this .afAuth.auth. signInWithEmailAndPassword (email, password)
       this .router. navigate ([ '/' ]);
       } 
-    catch (e) {
+      catch (e) {
       alert ( "Error!" + e.message);
     }
   }
 
 
   async logout (){
-    await this .afAuth.auth. signOut ();
-    localStorage. removeItem ( 'user' );
-    this .router. navigate ([ '/login' ]);
+  await this .afAuth.auth. signOut ();
+  localStorage. removeItem ( 'user' );
+  this .router. navigate ([ '/login' ]);
   }
 
 
   get isLoggedIn () : boolean {
-    const user = JSON . parse (localStorage. getItem ( 'user' ));
-    return user !== null ;
+  const user = JSON . parse (localStorage. getItem ( 'user' ));
+  return user !== null ;
   }
 
 }
