@@ -1,0 +1,17 @@
+.card {
+  margin: 7px;
+}
+
+.component-anchor {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.component-anchor:hover {
+  text-decoration: none;
+}
+
+.component-name {
+  color: black;
+}
+

@@ -15,6 +15,8 @@ import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { LoginComponent } from './admin/login/login.component';
 
+import { FormsModule } from '@angular/forms';
+
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: 'home', component: HomeComponent },
@@ -48,7 +50,8 @@ const config = {
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),
-    NgbModule
+    NgbModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

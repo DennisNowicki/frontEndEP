@@ -1,1 +1,37 @@
-<p>builder works!</p>
+<div class="container">
+  <h2>User Settings</h2>
+
+  <form #form="ngForm">
+
+    <div class="form-group">
+      <label for="usageType">Application usage</label>
+      <select id="usageType" class="form-control" name="usageType" [(ngModel)]="userSettings.usageType">
+        <option>Static display of media (informative)</option>
+        <option>Dynamic display of media (informative and/or entertainment)</option>
+        <option>E-commerce</option>
+        <option>Web portal (forum/social media)</option>
+        <option>CMS based website</option>
+      </select>
+
+      <label for="description">Please describe your idea</label>
+      <textarea name="description" id="description" class="form-control" rows="3" [(ngModel)]="userSettings.description"></textarea>
+    </div>
+
+    <button class="btn btn-primary">Next</button>
+    <div class="form-group d-flex flex-wrap" >
+      <a class="component-anchor" *ngFor="let component of components" (click)='isClicked()'>
+        <div class="card" style="width: 14rem;">
+          <div class="card-body text-center center">
+            <p class="component-name">{{component.name}}</p>
+            <img src="{{component.src}}"  alt="db_icon">
+          </div>
+        </div>
+      </a>
+    </div>
+
+
+  </form>
+</div>
+
+
+{{ form.value | json }}

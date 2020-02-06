@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ComponentFactoryResolver } from '@angular/core';
+import { UserSettings } from '../data/user-settings';
+import { componentsArray } from './builder';
 
 @Component({
   selector: 'app-builder',
@@ -6,10 +8,23 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./builder.component.css']
 })
 export class BuilderComponent implements OnInit {
+  components = componentsArray;
+
+  orignalUserSettings: UserSettings  = {
+    usageType: null,
+    description: null,
+    database: null
+  };
+
+  userSettings: UserSettings = { ...this.orignalUserSettings};
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  isClicked() {
+    alert('clicked');
   }
 
 }
