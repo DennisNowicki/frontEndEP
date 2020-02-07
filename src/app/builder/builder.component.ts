@@ -23,7 +23,7 @@ export class BuilderComponent implements OnInit {
   ngOnInit() {
   }
 
-  isClicked() {
+  isClicked(value: string) {
     alert('clicked');
   }
 

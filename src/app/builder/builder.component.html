@@ -19,7 +19,7 @@
 
     <button class="btn btn-primary">Next</button>
     <div class="form-group d-flex flex-wrap" >
-      <a class="component-anchor" *ngFor="let component of components" (click)='isClicked()'>
+      <a class="component-anchor" *ngFor="let component of components" >
         <div class="card" style="width: 14rem;">
           <div class="card-body text-center center">
             <p class="component-name">{{component.name}}</p>
