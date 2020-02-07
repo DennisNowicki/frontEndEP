@@ -1,41 +1,62 @@
-<div class="container">
-  <h2>User Settings</h2>
+<div class="container-fluid">
+  <div class="row">
 
-  <form #form1 ="ngForm" [hidden]="isClickedVar">
+    <div class="col-md  -12 col-lg-8">
 
-    <div class="form-group">
-      <label for="usageType">Application usage</label>
-      <select id="usageType" class="form-control" name="usageType" [(ngModel)]="userSettings.usageType">
-        <option>Static display of media (informative)</option>
-        <option>Dynamic display of media (informative and/or entertainment)</option>
-        <option>E-commerce</option>
-        <option>Web portal (forum/social media)</option>
-        <option>CMS based website</option>
-      </select>
+      <h2>User Settings</h2>
 
-      <label for="description">Please describe your idea</label>
-      <textarea name="description" id="description" class="form-control" rows="3" [(ngModel)]="userSettings.description"></textarea>
-    </div>
-    <button class="btn btn-primary" (click)="isClicked()">Next</button>
-  </form>
+      <form #form1 ="ngForm" [hidden]="isClickedVar">
 
+        <div class="form-group">
+          <label for="usageType">Application usage</label>
+          <select id="usageType" class="form-control" name="usageType" [(ngModel)]="userSettings.usageType">
+            <option>Static display of media (informative)</option>
+            <option>Dynamic display of media (informative and/or entertainment)</option>
+            <option>E-commerce</option>
+            <option>Web portal (forum/social media)</option>
+            <option>CMS based website</option>
+          </select>
 
-  <form #form2 ="ngForm">
-
-    <div class="form-group d-flex flex-wrap" >
-      <a class="component-anchor" *ngFor="let component of components$ | async" >
-        <div class="card" style="width: 14rem;">
-          <div class="card-body text-center center">
-            <p class="component-name">{{component.name}}</p>
-            <img src="{{component.src}}"  alt="db_icon">
-            <p class="component-name">Price: € {{component.fee}}</p>
-            <p class="component-name">Duration: {{component.minHours}}h - {{component.maxHours}}h</p>
-          </div>
+          <label for="description">Please describe your idea</label>
+          <textarea name="description" id="description" class="form-control" rows="3" [(ngModel)]="userSettings.description"></textarea>
         </div>
-      </a>
+        <button class="btn btn-primary" (click)="isClicked()">Next</button>
+      </form>
+
+
+      <form #form2 ="ngForm">
+
+        <div class="form-group d-flex flex-wrap" >
+          <a class="component-anchor" *ngFor="let component of components$ | async" >
+            <div class="card" style="width: 11rem;">
+              <div class="card-body text-center center">
+                <p class="component-name">{{component.name}}</p>
+                <img src="{{component.src}}" style="max-width: 80px; max-height: 80px;"  alt="db_icon">
+                <p class="component-name">Price: € {{component.fee}}</p>
+                <p class="component-name">Duration: {{component.minHours}}h - {{component.maxHours}}h</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </form>
     </div>
-  </form>
+
+    <div class="col-md-12 col-lg-4">
+      <br>
+      <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+          <h1 class="display-4">Summary</h1>
+          <p class="lead">This is a list with items you selected for your WebApp</p>
+          <p class="lead">{{ form1.value | json }}</p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  
 </div>
 
 
-{{ form1.value | json }}
+
