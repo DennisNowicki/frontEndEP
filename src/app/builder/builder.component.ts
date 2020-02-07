@@ -12,6 +12,8 @@ import { ComponentsService} from '../data/components/components.service';
 })
 export class BuilderComponent implements OnInit {
   public components$: Observable<Components[]>;
+  public componentsDetail$: Observable<any[]>;
+
   isClickedVar: boolean;
 
   orignalUserSettings: UserSettings  = {
@@ -24,12 +26,22 @@ export class BuilderComponent implements OnInit {
 
   constructor(private ComponentService: ComponentsService) { }
 
-  ngOnInit() {
-    this.components$ = this.ComponentService.getComponents();
-  }
-
   isClicked() {
     this.isClickedVar = true;
   }
 
+  addComponent(value) {
+    this.addComponentDetail(value);
+  }
+
+  addComponentDetail(details) {
+    const compJSON = new Components(null,
+      details.name,
+      details.src
+    );
+    this.ComponentService.addComponentJSON(compJSON).subscribe();
+  }
+  ngOnInit() {
+    this.components$ = this.ComponentService.getComponents();
+  }
 }
