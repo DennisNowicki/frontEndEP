@@ -1,6 +1,9 @@
 import { Component, OnInit, ComponentFactoryResolver } from '@angular/core';
 import { UserSettings } from '../data/user-settings';
-import { componentsArray } from './builder';
+import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
+import { Components } from '../data/components/components.model';
+import { ComponentsService} from '../data/components/components.service';
 
 @Component({
   selector: 'app-builder',
@@ -8,7 +11,7 @@ import { componentsArray } from './builder';
   styleUrls: ['./builder.component.css']
 })
 export class BuilderComponent implements OnInit {
-  components = componentsArray;
+  public components$: Observable<Components[]>;
 
   orignalUserSettings: UserSettings  = {
     usageType: null,
@@ -18,9 +21,10 @@ export class BuilderComponent implements OnInit {
 
   userSettings: UserSettings = { ...this.orignalUserSettings};
 
-  constructor() { }
+  constructor(private ComponentService: ComponentsService) { }
 
   ngOnInit() {
+    this.components$ = this.ComponentService.getComponents();
   }
 
   isClicked(value: string) {

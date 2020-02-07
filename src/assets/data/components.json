@@ -1,0 +1,79 @@
+{
+  "components": [
+    {
+      "id": 1,
+      "name": "Admin panel",
+      "src": "../../assets/icons/admin_panel.png"
+    },
+    {
+      "id": 2,
+      "name": "Calendar",
+      "src": "../../assets/icons/calender_ico.png"
+    },
+    {
+      "id": 3,
+      "name": "Shopping cart",
+      "src": "../../assets/icons/cart_ico.png"
+    },
+    {
+      "id": 4,
+      "name": "Chatbox",
+      "src": "../../assets/icons/chatbox_ico.png"
+    },
+    {
+      "id": 5,
+      "name": "Database",
+      "src": "../../assets/icons/database_ico.png"
+    },
+    {
+      "id": 6,
+      "name": "Geolocation",
+      "src": "../../assets/icons/geolocation_ico.png"
+    },
+    {
+      "id": 7,
+      "name": "Language support",
+      "src": "../../assets/icons/language_support_ico.png"
+    },
+    {
+      "id": 8,
+      "name": "Login system",
+      "src": "../../assets/icons/login_system_ico.png"
+    },
+    {
+      "id": 9,
+      "name": "Multimedia integration",
+      "src": "../../assets/icons/multimedia_intergration_ico.png"
+    },
+    {
+      "id": 10,
+      "name": "Notifications",
+      "src": "../../assets/icons/notification_ico.png"
+    },
+    {
+      "id": 11,
+      "name": "Payment service",
+      "src": "../../assets/icons/payment_service_ico.png"
+    },
+    {
+      "id": 12,
+      "name": "Statistics",
+      "src": "../../assets/icons/statistics_ico.png"
+    },
+    {
+      "id": 13,
+      "name": "Tech support",
+      "src": "../../assets/icons/techsupport_ico.png"
+    },
+    {
+      "id": 14,
+      "name": "Upload capabilities",
+      "src": "../../assets/icons/upload_capabilities_ico.png"
+    },
+    {
+      "id": 15,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png"
+    }
+  ]
+}

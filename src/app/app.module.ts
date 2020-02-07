@@ -14,6 +14,7 @@ import { ContactComponent } from './contact/contact.component';
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { LoginComponent } from './admin/login/login.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { FormsModule } from '@angular/forms';
 
@@ -51,7 +52,8 @@ const config = {
     AppRoutingModule,
     RouterModule.forRoot(routes),
     NgbModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
