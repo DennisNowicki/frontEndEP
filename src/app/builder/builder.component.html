@@ -1,7 +1,7 @@
 <div class="container">
   <h2>User Settings</h2>
 
-  <form #form="ngForm">
+  <form #form1 ="ngForm" [hidden]="isClickedVar">
 
     <div class="form-group">
       <label for="usageType">Application usage</label>
@@ -16,8 +16,12 @@
       <label for="description">Please describe your idea</label>
       <textarea name="description" id="description" class="form-control" rows="3" [(ngModel)]="userSettings.description"></textarea>
     </div>
+    <button class="btn btn-primary" (click)="isClicked()">Next</button>
+  </form>
 
-    <button class="btn btn-primary">Next</button>
+
+  <form #form2 ="ngForm">
+
     <div class="form-group d-flex flex-wrap" >
       <a class="component-anchor" *ngFor="let component of components$ | async" >
         <div class="card" style="width: 14rem;">
@@ -32,4 +36,4 @@
 </div>
 
 
-{{ form.value | json }}
+{{ form1.value | json }}

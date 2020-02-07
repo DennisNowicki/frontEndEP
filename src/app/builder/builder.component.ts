@@ -12,6 +12,7 @@ import { ComponentsService} from '../data/components/components.service';
 })
 export class BuilderComponent implements OnInit {
   public components$: Observable<Components[]>;
+  isClickedVar: boolean;
 
   orignalUserSettings: UserSettings  = {
     usageType: null,
@@ -27,8 +28,8 @@ export class BuilderComponent implements OnInit {
     this.components$ = this.ComponentService.getComponents();
   }
 
-  isClicked(value: string) {
-    alert('clicked');
+  isClicked() {
+    this.isClickedVar = true;
   }
 
 }
