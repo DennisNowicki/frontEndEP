@@ -4,6 +4,29 @@
       "id": 1,
       "name": null,
       "src": null
+    },
+    {
+      "id": 2,
+      "name": "Chatbox",
+      "src": "../../assets/icons/chatbox_ico.png"
+    },
+    {
+      "id": 3,
+      "name": "Login system",
+      "src": "../../assets/icons/login_system_ico.png"
+    },
+    {
+      "id": 4,
+      "name": "Geolocation",
+      "src": "../../assets/icons/geolocation_ico.png"
+    },
+    {
+      "id": 5,
+      "name": "Calendar",
+      "src": "../../assets/icons/calender_ico.png",
+      "fee": 20,
+      "minHours": 2,
+      "maxHours": 20
     }
   ]
 }

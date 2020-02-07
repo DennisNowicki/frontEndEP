@@ -37,7 +37,10 @@ export class BuilderComponent implements OnInit {
   addComponentDetail(details) {
     const compJSON = new Components(null,
       details.name,
-      details.src
+      details.src,
+      details.fee,
+      details.minHours,
+      details.maxHours
     );
     this.ComponentService.addComponentJSON(compJSON).subscribe();
   }

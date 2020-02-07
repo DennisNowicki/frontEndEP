@@ -123,10 +123,10 @@
   ],
 
   "pricePerHour": [
-    { 
+    {
       "junior" : 40
     },
-    { 
+    {
       "senior" : 60
     }
   ]
