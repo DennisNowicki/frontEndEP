@@ -23,7 +23,7 @@
   <form #form2 ="ngForm">
 
     <div class="form-group d-flex flex-wrap" >
-      <a class="component-anchor" *ngFor="let component of components$ | async" >
+      <a class="component-anchor" *ngFor="let component of components$ | async" (click)="addComponent(component)">
         <div class="card" style="width: 14rem;">
           <div class="card-body text-center center">
             <p class="component-name">{{component.name}}</p>

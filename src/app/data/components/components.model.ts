@@ -1,5 +1,7 @@
-export interface Components {
-  id: number;
-  name: string;
-  src: string;
+export class Components {
+  constructor(
+    public id: void,
+    public name: string,
+    public src: string
+  ) {}
 }
