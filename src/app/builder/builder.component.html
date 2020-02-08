@@ -30,7 +30,9 @@
           <a class="component-anchor" *ngFor="let component of components$ | async" (click)=addComponent(component)>
             <div class="card" style="width: 11rem;">
               <div class="card-body text-center center">
-                <p class="component-name">{{component.name}}</p>
+                <p class="component-name">{{component.name}} {{component.icon}}</p>
+                <fa-icon [icon]="faBell"></fa-icon>
+                <!-- <fa-icon [icon]="{{component.icon}}"></fa-icon> -->
                 <img src="{{component.src}}" style="max-width: 80px; max-height: 80px;"  alt="db_icon">
                 <p class="component-name">Price: € {{component.fee}}</p>
                 <p class="component-name">Duration: {{component.minHours}}h - {{component.maxHours}}h</p>
@@ -45,9 +47,15 @@
       <br>
       <div class="jumbotron jumbotron-fluid">
         <div class="container">
+          <fa-icon [icon]="faCoffee"></fa-icon>
           <h1 class="display-4">Summary</h1>
           <p class="lead">This is a list with items you selected for your WebApp</p>
           <p class="lead">{{ form1.value | json }}</p>
+          <div *ngFor="let chosen of chosenComponents$ | async">
+            <p> {{chosen.name}} </p>
+            <img src="{{chosen.src}}" style="max-width: 80px; max-height: 80px;"  alt="db_icon">
+          </div>
+          
 
         </div>
       </div>

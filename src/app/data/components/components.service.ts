@@ -1,5 +1,6 @@
 import { Injectable, Component } from '@angular/core';
 import { Components } from './components.model';
+
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 import { map } from 'rxjs/operators';
@@ -17,6 +18,12 @@ export class ComponentsService {
   getComponents(): Observable<Components[]> {
     return this.http
     .get<Components[]>(this.url)
+    .pipe();
+  }
+
+  getChosenComponents(): Observable<Components[]> {
+    return this.http
+    .get<Components[]>(this.urllocal)
     .pipe();
   }
 

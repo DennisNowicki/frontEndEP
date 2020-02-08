@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Components } from '../data/components/components.model';
 import { ComponentsService} from '../data/components/components.service';
+import { faCoffee, faBell } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-builder',
@@ -12,7 +13,11 @@ import { ComponentsService} from '../data/components/components.service';
 })
 export class BuilderComponent implements OnInit {
   public components$: Observable<Components[]>;
+  public chosenComponents$: Observable<Components[]>;
   public componentsDetail$: Observable<any[]>;
+
+  faCoffee = faCoffee;
+  faBell = faBell;
 
   isClickedVar: boolean;
 
@@ -46,5 +51,9 @@ export class BuilderComponent implements OnInit {
   }
   ngOnInit() {
     this.components$ = this.ComponentService.getComponents();
+    this.chosenComponents$ = this.ComponentService.getChosenComponents();
   }
+
+  
+
 }

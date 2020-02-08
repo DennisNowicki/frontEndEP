@@ -8,7 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "json-server": "json-server --watch src/assets/data/components.json"
+    "json-server": "json-server --watch src/assets/data/components.json",
+    "json-server4000": "json-server -p 4000 --watch src/assets/data/chosenComponents.json"
   },
   "private": true,
   "dependencies": {
@@ -21,6 +22,9 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "~8.2.14",
+    "@fortawesome/angular-fontawesome": "^0.5.0",
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
     "@ng-bootstrap/ng-bootstrap": "^5.2.1",
     "bootstrap": "^4.4.1",
     "firebase": "^7.8.0",
