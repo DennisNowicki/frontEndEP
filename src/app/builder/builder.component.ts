@@ -12,6 +12,7 @@ import { ComponentsService} from '../data/components/components.service';
 })
 export class BuilderComponent implements OnInit {
   public components$: Observable<Components[]>;
+  public chosenComponents$: Observable<Components[]>;
   public componentsDetail$: Observable<any[]>;
 
   isClickedVar: boolean;
@@ -46,5 +47,9 @@ export class BuilderComponent implements OnInit {
   }
   ngOnInit() {
     this.components$ = this.ComponentService.getComponents();
+    this.chosenComponents$ = this.ComponentService.getChosenComponents();
   }
+
+  
+
 }
