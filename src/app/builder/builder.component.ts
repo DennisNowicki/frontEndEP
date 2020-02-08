@@ -54,6 +54,6 @@ export class BuilderComponent implements OnInit {
     this.chosenComponents$ = this.ComponentService.getChosenComponents();
   }
 
-  
+
 
 }
