@@ -27,6 +27,70 @@
       "fee": 20,
       "minHours": 2,
       "maxHours": 20
+    },
+    {
+      "id": 6,
+      "name": "Admin panel",
+      "src": "../../assets/icons/admin_panel.png",
+      "fee": 10,
+      "minHours": 1,
+      "maxHours": 10
+    },
+    {
+      "id": 7,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png",
+      "fee": 150,
+      "minHours": 15,
+      "maxHours": 150
+    },
+    {
+      "id": 8,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png",
+      "fee": 150,
+      "minHours": 15,
+      "maxHours": 150
+    },
+    {
+      "id": 9,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png",
+      "fee": 150,
+      "minHours": 15,
+      "maxHours": 150
+    },
+    {
+      "id": 10,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png",
+      "fee": 150,
+      "minHours": 15,
+      "maxHours": 150
+    },
+    {
+      "id": 11,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png",
+      "fee": 150,
+      "minHours": 15,
+      "maxHours": 150
+    },
+    {
+      "id": 12,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png",
+      "fee": 150,
+      "minHours": 15,
+      "maxHours": 150
+    },
+    {
+      "id": 13,
+      "name": "User experience",
+      "src": "../../assets/icons/user_experience_ico.png",
+      "fee": 150,
+      "minHours": 15,
+      "maxHours": 150
     }
   ]
 }
