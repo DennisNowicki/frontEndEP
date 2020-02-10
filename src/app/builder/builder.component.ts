@@ -16,12 +16,9 @@ export class BuilderComponent implements OnInit {
   public chosenComponents$: Observable<Components[]>;
   public componentsDetail$: Observable<any[]>;
 
-
   isClickedVar: boolean;
 
   chosenComponents = [];
-
-
 
   constructor(private ComponentService: ComponentsService) { }
 
