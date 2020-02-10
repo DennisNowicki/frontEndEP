@@ -25,4 +25,12 @@
   max-width: 80px;
 }
 
+.erase{
+display: none;
+}
+
+.list-group-item:hover .erase{
+  display: inline-block;
+}
+
 

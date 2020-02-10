@@ -39,17 +39,6 @@
     </div>
 
     <div class="col-md-12 col-lg-4">
-<!--
-      <div class="jumbotron jumbotron-fluid jumbotron-fixed-margin">
-        <div class="container">
-          <h1 class="display-4">Summary</h1>
-          <p class="lead">This is a list with items you selected for your WebApp</p>
-          <div *ngFor="let chosen of chosenComponents$ | async">
-            <p> {{chosen.name}} </p>
-            <img src="{{chosen.src}}" class="card-icon"  alt="db_icon">
-          </div>
-        </div>
-      </div> -->
 
       <div class="card" style="width: 22rem;">
         <div class="card-header">
@@ -58,6 +47,7 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item" *ngFor="let chosen of chosenComponents">
             <img src="{{chosen.src}}" class="card-icon" alt="{{chosen.name}}_icon"> {{ chosen.name }}
+            <button class="btn btn-outline-default btn-just-icon erase" (click)="eraseComponent(chosen)" >x</button>
           </li>
         </ul>
       </div>
