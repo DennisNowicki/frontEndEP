@@ -2,31 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-
-import { AppRoutingModule } from './app-routing.module';
-import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { BuilderComponent } from './builder/builder.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { ContactComponent } from './contact/contact.component';
-
-import { AngularFireModule } from "@angular/fire";
-import { AngularFireAuthModule } from "@angular/fire/auth";
-import { LoginComponent } from './admin/login/login.component';
-import { HttpClientModule } from '@angular/common/http';
-
+import { RouterModule } from '@angular/router';
+import { AppRoutingModule } from './app.routing';
 import { FormsModule } from '@angular/forms';
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AppComponent } from './app.component';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
 
-const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent },
-  { path: 'builder', component: BuilderComponent},
-  { path: 'contact', component: ContactComponent},
-  { path: 'login' , component: LoginComponent}
-  ];
+import { ComponentsModule } from './components/components.module';
+import { ExamplesModule } from './examples/examples.module';
+
+import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireAuthModule } from '@angular/fire/auth';
 
 const config = {
   apiKey: "AIzaSyAp0PvD5tcTHy4CvP1DcKjFerYbi1INLSY",
@@ -41,22 +30,20 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
-    BuilderComponent,
     NavbarComponent,
-    ContactComponent,
-    LoginComponent
+    FooterComponent
   ],
   imports: [
+    BrowserModule,
+    NgbModule.forRoot(),
+    FormsModule,
+    RouterModule,
+    ComponentsModule,
+    ExamplesModule,
+    AppRoutingModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(config),
     AngularFireAuthModule,
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes),
-    NgbModule,
-    FormsModule,
-    HttpClientModule,
-    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,7 @@
 
         <div class="form-group">
           <label for="usageType">Application usage</label>
-          <select id="usageType" class="form-control" name="usageType" [(ngModel)]="userSettings.usageType">
+          <select id="usageType" class="form-control" name="usageType" >
             <option>Static display of media (informative)</option>
             <option>Dynamic display of media (informative and/or entertainment)</option>
             <option>E-commerce</option>
@@ -18,7 +18,7 @@
           </select>
 
           <label for="description">Please describe your idea</label>
-          <textarea name="description" id="description" class="form-control" rows="3" [(ngModel)]="userSettings.description"></textarea>
+          <textarea name="description" id="description" class="form-control" rows="3" ></textarea>
         </div>
         <button class="btn btn-primary" (click)="isClicked()">Next</button>
       </form>

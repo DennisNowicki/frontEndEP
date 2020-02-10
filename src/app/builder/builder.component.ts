@@ -4,7 +4,6 @@ import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { Components } from '../data/components/components.model';
 import { ComponentsService} from '../data/components/components.service';
-import { faCoffee, faBell } from '@fortawesome/free-solid-svg-icons';
 import { count } from 'rxjs/operators';
 
 @Component({
@@ -17,22 +16,12 @@ export class BuilderComponent implements OnInit {
   public chosenComponents$: Observable<Components[]>;
   public componentsDetail$: Observable<any[]>;
 
-  faCoffee = faCoffee;
-  faBell = faBell;
 
   isClickedVar: boolean;
 
-  chosenComponents = [
-    
-  ];
+  chosenComponents = [];
 
-  orignalUserSettings: UserSettings  = {
-    usageType: null,
-    description: null,
-    database: null
-  };
 
-  userSettings: UserSettings = { ...this.orignalUserSettings};
 
   constructor(private ComponentService: ComponentsService) { }
 
@@ -41,18 +30,17 @@ export class BuilderComponent implements OnInit {
   }
 
   addComponent(value) {
-    // this.addComponentDetail(value);
     let counter = 0;
 
     if(this.chosenComponents.length === 0) {
       counter = counter;
-    } 
+    }
     else {
       for(let i = 0; i < this.chosenComponents.length; i++) {
         if(this.chosenComponents[i].name === value.name) {
           counter++;
           this.chosenComponents.splice(i,1);
-        } 
+        }
         else {
           counter = counter;
         }
@@ -69,29 +57,19 @@ export class BuilderComponent implements OnInit {
         )
       )
     }
-    else{ 
-      
-    }
   }
 
   eraseComponent(value){
-    
+
     for(let i = 0; i < this.chosenComponents.length; i++) {
       if(this.chosenComponents[i].name === value.name) {
         this.chosenComponents.splice(i,1);
-      } 
-      else {
-        
       }
     }
   }
-  
+
   ngOnInit() {
     this.components$ = this.ComponentService.getComponents();
     this.chosenComponents$ = this.ComponentService.getChosenComponents();
   }
-
- 
-  
-
 }

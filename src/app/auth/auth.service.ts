@@ -18,7 +18,7 @@ export class AuthService {
       if (user) {
         this .user = user;
           localStorage. setItem ( "user" , JSON . stringify ( this .user));
-      } 
+      }
       else {
         localStorage. setItem ( "user" , null );
       }
@@ -30,7 +30,7 @@ export class AuthService {
     try {
       await this .afAuth.auth. signInWithEmailAndPassword (email, password)
       this .router. navigate ([ '/' ]);
-      } 
+      }
       catch (e) {
       alert ( "Error!" + e.message);
     }
