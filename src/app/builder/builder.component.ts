@@ -21,6 +21,10 @@ export class BuilderComponent implements OnInit {
 
   isClickedVar: boolean;
 
+  chosenComponents = [
+    
+  ];
+
   orignalUserSettings: UserSettings  = {
     usageType: null,
     description: null,
@@ -36,7 +40,17 @@ export class BuilderComponent implements OnInit {
   }
 
   addComponent(value) {
-    this.addComponentDetail(value);
+    // this.addComponentDetail(value);
+    
+    this.chosenComponents.push(
+      new Components(null,
+        value.name,
+        value.src,
+        value.fee,
+        value.minHours,
+        value.maxHours
+      )
+    )
   }
 
   addComponentDetail(details) {
@@ -54,6 +68,7 @@ export class BuilderComponent implements OnInit {
     this.chosenComponents$ = this.ComponentService.getChosenComponents();
   }
 
-
+ 
+  
 
 }

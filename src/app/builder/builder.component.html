@@ -56,7 +56,7 @@
           Overview of selected items
         </div>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item" *ngFor="let chosen of chosenComponents$ | async">
+          <li class="list-group-item" *ngFor="let chosen of chosenComponents">
             <img src="{{chosen.src}}" class="card-icon" alt="{{chosen.name}}_icon"> {{ chosen.name }}
           </li>
         </ul>
