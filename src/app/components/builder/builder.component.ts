@@ -65,6 +65,5 @@ export class BuilderComponent implements OnInit {
 
   ngOnInit() {
     this.components$ = this.ComponentService.getComponents();
-    this.chosenComponents$ = this.ComponentService.getChosenComponents();
   }
 }
