@@ -1,9 +1,7 @@
-import { Component, OnInit, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Router } from '@angular/router';
 import { Components } from '../../data/components/components.model';
 import { ComponentsService} from '../../data/components/components.service';
-import { count } from 'rxjs/operators';
 
 @Component({
   selector: 'app-builder',
@@ -12,53 +10,45 @@ import { count } from 'rxjs/operators';
 })
 export class BuilderComponent implements OnInit {
   public components$: Observable<Components[]>;
-  public chosenComponents$: Observable<Components[]>;
-  public componentsDetail$: Observable<any[]>;
-  isClickedVar: boolean;
+
+  // tslint:disable: no-inferrable-types
+  form1Active: boolean = true;
 
   chosenComponents = [];
 
   constructor(private ComponentService: ComponentsService) { }
 
   isClicked() {
-    this.isClickedVar = true;
+    this.form1Active = false;
   }
 
-  addComponent(value) {
+  addComponent(value: Components) {
     let counter = 0;
 
-    if(this.chosenComponents.length === 0) {
+    if (this.chosenComponents.length === 0) {
       counter = counter;
-    }
-    else {
-      for(let i = 0; i < this.chosenComponents.length; i++) {
-        if(this.chosenComponents[i].name === value.name) {
+    } else {
+      for (let i = 0; i < this.chosenComponents.length; i++) {
+        if (this.chosenComponents[i].name === value.name) {
           counter++;
-          this.chosenComponents.splice(i,1);
-        }
-        else {
-          counter = counter;
+          this.chosenComponents.splice(i, 1);
         }
       }
     }
-    if (counter === 0){
+
+    if (counter === 0) {
       this.chosenComponents.push(
         new Components(null,
           value.name,
           value.src,
-          value.fee,
-          value.minHours,
-          value.maxHours
-        )
-      )
+          value.fee))
     }
   }
 
-  eraseComponent(value){
-
-    for(let i = 0; i < this.chosenComponents.length; i++) {
-      if(this.chosenComponents[i].name === value.name) {
-        this.chosenComponents.splice(i,1);
+  eraseComponent(value: Components) {
+    for (let i = 0; i < this.chosenComponents.length; i++) {
+      if (this.chosenComponents[i].name === value.name) {
+        this.chosenComponents.splice(i, 1);
       }
     }
   }

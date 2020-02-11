@@ -5,7 +5,7 @@
 
       <h2>User Settings</h2>
 
-      <form #form1 ="ngForm" [hidden]="isClickedVar">
+      <form #form1 ="ngForm" [hidden]="!form1Active">
 
         <div class="form-group">
           <label for="usageType">Application usage</label>
@@ -16,15 +16,13 @@
             <option>Web portal (forum/social media)</option>
             <option>CMS based website</option>
           </select>
-
           <label for="description">Please describe your idea</label>
           <textarea name="description" id="description" class="form-control" rows="3" ></textarea>
         </div>
         <button class="btn btn-primary" (click)="isClicked()">Next</button>
       </form>
 
-      <!-- [hidden]="!isClickedVar"  add this to form2 -->
-      <form #form2 ="ngForm"  >
+      <form #form2 ="ngForm" [hidden]="form1Active">
         <div class="form-group d-flex flex-wrap" >
           <a class="component-anchor" *ngFor="let component of components$ | async" (click)=addComponent(component)>
             <div class="card" style="width: 11rem;">
@@ -47,7 +45,7 @@
         <ul class="list-group list-group-flush">
           <li class="list-group-item" *ngFor="let chosen of chosenComponents">
             <img src="{{chosen.src}}" class="card-icon" alt="{{chosen.name}}_icon"> {{ chosen.name }}
-            <button class="btn btn-outline-default btn-just-icon erase" (click)="eraseComponent(chosen)" >x</button>
+            <button class="btn btn-outline-danger btn-sm btn-just-icon erase" (click)="eraseComponent(chosen)">X</button>
           </li>
         </ul>
       </div>

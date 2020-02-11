@@ -61,7 +61,8 @@
 }
 
 .erase{
-display: none;
+  display: none;
+  float: right;
 }
 
 .list-group-item:hover .erase{
