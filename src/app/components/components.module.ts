@@ -17,6 +17,7 @@ import { NgbdModalContent } from './modal/modal.component';
 import { BuilderComponent } from './builder/builder.component';
 import { LoginComponent } from './admin/login/login.component';
 import { HomeComponent } from './home/home.component';
+import { PanelComponent } from './admin/panel/panel.component';
 
 @NgModule({
     imports: [
@@ -38,7 +39,8 @@ import { HomeComponent } from './home/home.component';
         NgbdModalContent,
         BuilderComponent,
         LoginComponent,
-        HomeComponent
+        HomeComponent,
+        PanelComponent
     ],
     entryComponents: [NgbdModalContent],
     exports:[ ComponentsComponent ]

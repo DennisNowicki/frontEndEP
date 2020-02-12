@@ -9,7 +9,7 @@
 
         <div class="form-group">
           <label for="usageType">Application usage</label>
-          <select id="usageType" class="form-control" name="usageType" >
+          <select id="usageType" class="form-control" name="usageType" #usageType>
             <option>Static display of media (informative)</option>
             <option>Dynamic display of media (informative and/or entertainment)</option>
             <option>E-commerce</option>
@@ -17,9 +17,9 @@
             <option>CMS based website</option>
           </select>
           <label for="description">Please describe your idea</label>
-          <textarea name="description" id="description" class="form-control" rows="3" ></textarea>
+          <textarea name="description" id="description" class="form-control" rows="3" #description></textarea>
         </div>
-        <button class="btn btn-primary" (click)="isClicked()">Next</button>
+        <button class="btn btn-primary" (click)="isClicked(); addForm1Data()">Next</button>
       </form>
 
       <form #form2 ="ngForm" [hidden]="form1Active">
@@ -37,6 +37,17 @@
     </div>
 
     <div class="col-md-12 col-lg-4">
+
+      <div class="card overview-card" style="width: 22rem;">
+        <div class="card-header">
+          Overview of selected items
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item" *ngFor="let data of userData">
+           {{ data }}
+          </li>
+        </ul>
+      </div>
 
       <div class="card overview-card" style="width: 22rem;">
         <div class="card-header">

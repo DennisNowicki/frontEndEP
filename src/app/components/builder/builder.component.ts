@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Components } from '../../data/components/components.model';
 import { ComponentsService} from '../../data/components/components.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-builder',
@@ -9,11 +10,15 @@ import { ComponentsService} from '../../data/components/components.service';
   styleUrls: ['./builder.component.scss']
 })
 export class BuilderComponent implements OnInit {
+  @ViewChild('description') description: ElementRef;
+  @ViewChild('usageType') usageType: ElementRef;
+
   public components$: Observable<Components[]>;
 
   // tslint:disable: no-inferrable-types
   form1Active: boolean = true;
 
+  userData = [];
   chosenComponents = [];
 
   constructor(private ComponentService: ComponentsService) { }
@@ -55,5 +60,9 @@ export class BuilderComponent implements OnInit {
 
   ngOnInit() {
     this.components$ = this.ComponentService.getComponents();
+  }
+
+  addForm1Data() {
+    this.userData.push(this.usageType.nativeElement.value, this.description.nativeElement.value);
   }
 }

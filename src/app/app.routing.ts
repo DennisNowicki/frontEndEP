@@ -6,12 +6,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { BuilderComponent } from './components/builder/builder.component';
 import { LoginComponent } from './components/admin/login/login.component';
+import { PanelComponent } from './components/admin/panel/panel.component';
 
 const routes: Routes =[
     { path: '', redirectTo: 'home', pathMatch: 'full' },
     { path: 'home',             component: HomeComponent },
     { path: 'builder',          component: BuilderComponent},
-    { path: 'login' ,           component: LoginComponent}
+    { path: 'login' ,           component: LoginComponent},
+    { path: 'adminPanel',       component: PanelComponent}
 ];
 
 @NgModule({
