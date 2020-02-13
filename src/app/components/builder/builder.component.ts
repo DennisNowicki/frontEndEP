@@ -15,8 +15,14 @@ export class BuilderComponent implements OnInit {
 
   public components$: Observable<Components[]>;
 
+
+
   // tslint:disable: no-inferrable-types
   form1Active: boolean = true;
+  form2Active: boolean = false;
+  summaryActive: boolean = false;
+  summarySideActive: boolean = false;
+  public isCollapsed = false;
 
   userData = [];
   chosenComponents = [];
@@ -25,6 +31,13 @@ export class BuilderComponent implements OnInit {
 
   isClicked() {
     this.form1Active = !this.form1Active;
+    this.form2Active = !this.form2Active;
+  }
+
+  isClicked2(){
+    this.form2Active = !this.form2Active;
+    this.summaryActive = !this.summaryActive;
+    this.summarySideActive = !this.summarySideActive;
   }
 
   addComponent(value: Components) {
