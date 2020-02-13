@@ -24,7 +24,7 @@ export class BuilderComponent implements OnInit {
   constructor(private ComponentService: ComponentsService) { }
 
   isClicked() {
-    this.form1Active = false;
+    this.form1Active = !this.form1Active;
   }
 
   addComponent(value: Components) {
@@ -63,6 +63,13 @@ export class BuilderComponent implements OnInit {
   }
 
   addForm1Data() {
-    this.userData.push(this.usageType.nativeElement.value, this.description.nativeElement.value);
+    if(this.userData.length === 0){
+      this.userData.push(this.usageType.nativeElement.value,this.description.nativeElement.value );
+    }
+    else{
+      this.userData[0] = this.usageType.nativeElement.value;
+      this.userData[1] = this.description.nativeElement.value;
+    }
+
   }
 }
