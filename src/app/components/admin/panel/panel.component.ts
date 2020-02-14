@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Userdata } from '../../../data/userdata/userdata.model';
+import { UserdataService} from '../../../data/userdata/userdata.service';
+import { NgModel } from '@angular/forms';
 
 @Component({
   selector: 'app-panel',

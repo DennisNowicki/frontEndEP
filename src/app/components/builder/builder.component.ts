@@ -2,6 +2,8 @@ import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Components } from '../../data/components/components.model';
 import { ComponentsService} from '../../data/components/components.service';
+import { Userdata } from '../../data/userdata/userdata.model';
+import { UserdataService} from '../../data/userdata/userdata.service';
 import { NgModel } from '@angular/forms';
 
 @Component({
@@ -14,6 +16,7 @@ export class BuilderComponent implements OnInit {
   @ViewChild('usageType') usageType: ElementRef;
 
   public components$: Observable<Components[]>;
+  public userdata$: Observable<Userdata[]>;
 
 
 
@@ -27,7 +30,7 @@ export class BuilderComponent implements OnInit {
   userData = [];
   chosenComponents = [];
 
-  constructor(private ComponentService: ComponentsService) { }
+  constructor(private ComponentService: ComponentsService, private UserdataService: UserdataService) { }
 
   isClicked() {
     this.form1Active = !this.form1Active;
@@ -73,6 +76,7 @@ export class BuilderComponent implements OnInit {
 
   ngOnInit() {
     this.components$ = this.ComponentService.getComponents();
+    this.userdata$ = this.UserdataService.getUserdata();
   }
 
   addForm1Data() {

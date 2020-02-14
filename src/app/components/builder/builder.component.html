@@ -62,7 +62,7 @@
 
     <div class="col-md-12 col-lg-4" [hidden]="summarySideActive" style="background-color: g;">
 
-      <div class="card overview-card" style="width: 22rem;">
+      <div class="card overview-card" style="max-width: 42rem;">
         <div class="card-header">
           Overview of application
         </div>
@@ -73,7 +73,9 @@
         </ul>
       </div>
 
-      <div class="card overview-card" style="width: 22rem;">
+      <br><br>
+
+      <div class="card overview-card" style="max-width: 42rem;">
         <div class="card-header">
           Overview of selected items
         </div>
@@ -85,6 +87,11 @@
         </ul>
       </div>
       
+      <div *ngFor="let userdata of userdata$ | async">
+        {{userdata.id}} {{userdata.name}}
+      </div>
+
+      <br><br>
     </div>
 
   </div>
