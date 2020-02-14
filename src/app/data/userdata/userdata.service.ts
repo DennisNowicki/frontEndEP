@@ -17,6 +17,6 @@ export class UserdataService {
   getUserdata(): Observable<Userdata[]> {
     return this.http
     .get<Userdata[]>(this.url)
-    .pipe(map(res => res.reverse["userdata"]));
+    .pipe(map(res => res["userdata"].reverse()));
   }
 }
