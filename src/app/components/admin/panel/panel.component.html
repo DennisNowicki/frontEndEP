@@ -1,3 +1,6 @@
 <div class="container panel-container">
   <h1>Admin panel</h1>
 </div>
+<div *ngFor="let userdata of userdata$ | async">
+  <span>{{userdata.name}}</span>
+</div>

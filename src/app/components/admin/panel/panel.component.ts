@@ -11,9 +11,12 @@ import { NgModel } from '@angular/forms';
 })
 export class PanelComponent implements OnInit {
 
-  constructor() { }
+  public userdata$: Observable<Userdata[]>;
+
+  constructor(private UserdataService: UserdataService) { }
 
   ngOnInit() {
+    this.userdata$ = this.UserdataService.getUserdata();
   }
 
 }
