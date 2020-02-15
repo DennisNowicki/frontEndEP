@@ -14,7 +14,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && npm install && npm start",
-    "json-server": "json-server --watch src/assets/data/components.json"
+    "json-server": "json-server --watch src/assets/data/userdata.json"
   },
   "dependencies": {
     "@angular-devkit/build-angular": "^0.13.0",

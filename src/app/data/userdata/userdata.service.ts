@@ -10,13 +10,13 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class UserdataService {
-  url = 'https://dennisnowicki.github.io/frontEndEP/src/assets/data/userdata.json';
+  url = 'http://localhost:3000/userdata';
 
   constructor(private http: HttpClient) { }
 
   getUserdata(): Observable<Userdata[]> {
     return this.http
     .get<Userdata[]>(this.url)
-    .pipe(map(res => res["userdata"].reverse()));
+    .pipe(map(res => res.reverse()));
   }
 }
