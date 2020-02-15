@@ -27,7 +27,7 @@ export class BuilderComponent implements OnInit {
   summarySideActive: boolean = false;
   public isCollapsed = false;
 
-  userData = [];
+  userApplication = [];
   chosenComponents = [];
 
   constructor(private ComponentService: ComponentsService, private UserdataService: UserdataService) { }
@@ -80,12 +80,12 @@ export class BuilderComponent implements OnInit {
   }
 
   addForm1Data() {
-    if(this.userData.length === 0){
-      this.userData.push(this.usageType.nativeElement.value,this.description.nativeElement.value );
+    if(this.userApplication.length === 0){
+      this.userApplication.push(this.usageType.nativeElement.value,this.description.nativeElement.value );
     }
     else{
-      this.userData[0] = this.usageType.nativeElement.value;
-      this.userData[1] = this.description.nativeElement.value;
+      this.userApplication[0] = this.usageType.nativeElement.value;
+      this.userApplication[1] = this.description.nativeElement.value;
     }
 
   }
