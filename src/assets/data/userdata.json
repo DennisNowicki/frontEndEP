@@ -5,57 +5,303 @@
         "applicationType" : "Static display of media",
         "applicationDescription": "description",
         "pagesCount": 4,
-        "pagesNames": {
-          "pageName":"Brecht",
-          "pageName":"Dennis",
-          "pageName":"Youssef",
-          "pageName":"Contact"
-        },
-        "adminPanel": true,
-        "calendar": true,
-        "shoppingCart": true,
-        "chatbox": true,
-        "database": true,
-        "geolocation": true,
-        "multiLanguage": true,
-        "loginSystem": true,
-        "mediaSupport": true,
-        "notification": true,
-        "paymentService": true,
-        "statistics": true,
-        "techSupport": true,
-        "fileUpload": true,
-        "userExperience": true,
+        "pagesNames": [
+          {"pageName":"Brecht"},
+          {"pageName":"Dennis"},
+          {"pageName":"Youssef"},
+          {"pageName":"Contact"}
+        ],
+        "components": [
+          {
+            "id": 1,
+            "name": "Admin panel",
+            "src": "../../assets/icons/admin_panel.png",
+            "fee": 10.00,
+            "minHours": 1,
+            "maxHours": 10,
+            "needed": true
+          },
+          {
+            "id": 2,
+            "name": "Calendar",
+            "src": "../../assets/icons/calender_ico.png",
+            "fee": 20.00,
+            "minHours": 2,
+            "maxHours": 20,
+            "needed": false
+            
+          },
+          {
+            "id": 3,
+            "name": "Shopping cart",
+            "src": "../../assets/icons/cart_ico.png",
+            "fee": 30.00,
+            "minHours": 3,
+            "maxHours": 30,
+            "needed": true
+          },
+          {
+            "id": 4,
+            "name": "Chatbox",
+            "src": "../../assets/icons/chatbox_ico.png",
+            "fee": 40.00,
+            "minHours": 4,
+            "maxHours": 40,
+            "needed": false
+          },
+          {
+            "id": 5,
+            "name": "Database",
+            "src": "../../assets/icons/database_ico.png",
+            "fee": 50.00,
+            "minHours": 5,
+            "maxHours": 50,
+            "needed": false
+          },
+          {
+            "id": 6,
+            "name": "Geolocation",
+            "src": "../../assets/icons/geolocation_ico.png",
+            "fee": 60.00,
+            "minHours": 6,
+            "maxHours": 60,
+            "needed": true
+          },
+          {
+            "id": 7,
+            "name": "Multilanguage",
+            "src": "../../assets/icons/language_support_ico.png",
+            "fee": 70.00,
+            "minHours": 7,
+            "maxHours": 70,
+            "needed": false
+          },
+          {
+            "id": 8,
+            "name": "Login system",
+            "src": "../../assets/icons/login_system_ico.png",
+            "fee": 80.00,
+            "minHours": 8,
+            "maxHours": 80,
+            "needed": true
+          },
+          {
+            "id": 9,
+            "name": "Media support",
+            "src": "../../assets/icons/multimedia_intergration_ico.png",
+            "fee": 90.00,
+            "minHours": 9,
+            "maxHours": 90,
+            "needed": false
+          },
+          {
+            "id": 10,
+            "name": "Notifications",
+            "src": "../../assets/icons/notification_ico.png",
+            "fee": 100.00,
+            "minHours": 10,
+            "maxHours": 100,
+            "needed": true
+          },
+          {
+            "id": 11,
+            "name": "Payment service",
+            "src": "../../assets/icons/payment_service_ico.png",
+            "fee": 110.00,
+            "minHours": 11,
+            "maxHours": 110,
+            "needed": false
+          },
+          {
+            "id": 12,
+            "name": "Statistics",
+            "src": "../../assets/icons/statistics_ico.png",
+            "fee": 120.00,
+            "minHours": 12,
+            "maxHours": 120,
+            "needed": false
+          },
+          {
+            "id": 13,
+            "name": "Tech support",
+            "src": "../../assets/icons/techsupport_ico.png",
+            "fee": 130.00,
+            "minHours": 13,
+            "maxHours": 130,
+            "needed": true
+          },
+          {
+            "id": 14,
+            "name": "File upload",
+            "src": "../../assets/icons/upload_capabilities_ico.png",
+            "fee": 140.00,
+            "minHours": 14,
+            "maxHours": 140,
+            "needed": false
+          },
+          {
+            "id": 15,
+            "name": "User experience",
+            "src": "../../assets/icons/user_experience_ico.png",
+            "fee": 150.00,
+            "minHours": 15,
+            "maxHours": 150,
+            "needed": false
+          }
+        ],
         "name": "Brecht",
         "email": "brecht_leben@hotmail.com",
         "message": "message",
         "finished": true
 
       },
+
       {
         "id": 2,
         "applicationType" : "CMS based website",
         "applicationDescription": "description",
         "pagesCount": 2,
-        "pagesNames": {
-          "pageName":"Brecht",
-          "pageName":"Dennis"
-        },
-        "adminPanel": true,
-        "calendar": false,
-        "shoppingCart": false,
-        "chatbox": false,
-        "database": false,
-        "geolocation": true,
-        "multiLanguage": true,
-        "loginSystem": true,
-        "mediaSupport": true,
-        "notification": false,
-        "paymentService": false,
-        "statistics": true,
-        "techSupport": true,
-        "fileUpload": true,
-        "userExperience": true,
+        "pagesNames": [ 
+          {"pageName":"Brecht"},
+          {"pageName":"Dennis"}
+        ],
+        "components": [
+          {
+            "id": 1,
+            "name": "Admin panel",
+            "src": "../../assets/icons/admin_panel.png",
+            "fee": 10.00,
+            "minHours": 1,
+            "maxHours": 10,
+            "needed": true
+          },
+          {
+            "id": 2,
+            "name": "Calendar",
+            "src": "../../assets/icons/calender_ico.png",
+            "fee": 20.00,
+            "minHours": 2,
+            "maxHours": 20,
+            "needed": false
+          },
+          {
+            "id": 3,
+            "name": "Shopping cart",
+            "src": "../../assets/icons/cart_ico.png",
+            "fee": 30.00,
+            "minHours": 3,
+            "maxHours": 30,
+            "needed": true
+          },
+          {
+            "id": 4,
+            "name": "Chatbox",
+            "src": "../../assets/icons/chatbox_ico.png",
+            "fee": 40.00,
+            "minHours": 4,
+            "maxHours": 40,
+            "needed": true
+          },
+          {
+            "id": 5,
+            "name": "Database",
+            "src": "../../assets/icons/database_ico.png",
+            "fee": 50.00,
+            "minHours": 5,
+            "maxHours": 50,
+            "needed": false
+          },
+          {
+            "id": 6,
+            "name": "Geolocation",
+            "src": "../../assets/icons/geolocation_ico.png",
+            "fee": 60.00,
+            "minHours": 6,
+            "maxHours": 60,
+            "needed": false
+          },
+          {
+            "id": 7,
+            "name": "Multilanguage",
+            "src": "../../assets/icons/language_support_ico.png",
+            "fee": 70.00,
+            "minHours": 7,
+            "maxHours": 70,
+            "needed": false
+          },
+          {
+            "id": 8,
+            "name": "Login system",
+            "src": "../../assets/icons/login_system_ico.png",
+            "fee": 80.00,
+            "minHours": 8,
+            "maxHours": 80,
+            "needed": false
+          },
+          {
+            "id": 9,
+            "name": "Media support",
+            "src": "../../assets/icons/multimedia_intergration_ico.png",
+            "fee": 90.00,
+            "minHours": 9,
+            "maxHours": 90,
+            "needed": true
+          },
+          {
+            "id": 10,
+            "name": "Notifications",
+            "src": "../../assets/icons/notification_ico.png",
+            "fee": 100.00,
+            "minHours": 10,
+            "maxHours": 100,
+            "needed": true
+          },
+          {
+            "id": 11,
+            "name": "Payment service",
+            "src": "../../assets/icons/payment_service_ico.png",
+            "fee": 110.00,
+            "minHours": 11,
+            "maxHours": 110,
+            "needed": true
+          },
+          {
+            "id": 12,
+            "name": "Statistics",
+            "src": "../../assets/icons/statistics_ico.png",
+            "fee": 120.00,
+            "minHours": 12,
+            "maxHours": 120,
+            "needed": true
+          },
+          {
+            "id": 13,
+            "name": "Tech support",
+            "src": "../../assets/icons/techsupport_ico.png",
+            "fee": 130.00,
+            "minHours": 13,
+            "maxHours": 130,
+            "needed": false
+          },
+          {
+            "id": 14,
+            "name": "File upload",
+            "src": "../../assets/icons/upload_capabilities_ico.png",
+            "fee": 140.00,
+            "minHours": 14,
+            "maxHours": 140,
+            "needed": false
+          },
+          {
+            "id": 15,
+            "name": "User experience",
+            "src": "../../assets/icons/user_experience_ico.png",
+            "fee": 150.00,
+            "minHours": 15,
+            "maxHours": 150,
+            "needed": true
+          }
+        ],
         "name": "Dennis",
         "email": "nowicki@hotmail.com",
         "message": "message2",
