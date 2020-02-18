@@ -62,7 +62,9 @@ export class BuilderComponent implements OnInit {
         new Components(null,
           value.name,
           value.src,
-          value.fee))
+          value.fee,
+          value.minHours,
+          value.maxHours))
     }
   }
 
