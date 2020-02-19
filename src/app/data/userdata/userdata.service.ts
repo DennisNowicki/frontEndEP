@@ -19,4 +19,13 @@ export class UserdataService {
     .get<Userdata[]>(this.url)
     .pipe(map(res => res.reverse()));
   }
+
+  addUserdataJSON(value): Observable<any> {
+    const headers = new HttpHeaders().set("Content-type", "application/json");
+    return this.http.post(this.url, value, { headers: headers });
+  }
+
+  deleteUserdata(value) {
+    return this.http.delete(this.url+`/${value}`)
+  }
 }

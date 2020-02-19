@@ -18,25 +18,10 @@
             <option>CMS based website</option>
           </select><br>
 
-          <label>Want to specify pages?</label><br>
+          <label for="pagesCount">How many pages do you want?</label><br>
+          <input style="text-align: center;" type="number" id="pagesCount" #pagesCount>
 
-          <span class="form-check-radio distance">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="pages" id="yes" value=true >
-              Yes
-              <span class="form-check-sign"></span>
-            </label>
-          </span>
-          <span class="form-check-radio distance">
-            <label class="form-check-label">
-              <input class="form-check-input" type="radio" name="pages" id="no" value=false checked="">
-              No
-              <span class="form-check-sign"></span>
-            </label>
-          </span><br><br>
-
-
-          
+          <br><br>
           <label for="description">Please describe your idea</label>
           <textarea name="description" placeholder="Description"  id="description" class="form-control" rows="3" #description></textarea>
         </div>
@@ -101,13 +86,13 @@
         <div class="container">
           <h2>Overview of selected items:</h2>
           <hr>
-          <h4>Selected Webapplication</h4><br>
+          <h4>Selected Webapplication <button style="float: right;" class="btn btn-primary" (click)="changeType()">Change</button> </h4>  <br>
           <ul>
             <li *ngFor="let application of userApplication" style="font-size: 16px;">
              {{ application }}
             </li>
           </ul>
-          <h4>Selected Components:</h4><br>
+          <h4>Selected Components <button style="float: right;" class="btn btn-primary" (click)="isClicked2()">Change</button></h4> <br>
           <ul>
             <li *ngFor="let chosen of chosenComponents" style="font-size: 16px;">
               <img src="{{chosen.src}}" class="card-icon" alt="{{chosen.name}}_icon"> {{ chosen.name }}
@@ -124,7 +109,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="nc-icon nc-single-02"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" >
+                    <input type="text" class="form-control" placeholder="Name" (focus)="focus=true" (blur)="focus=false" #name>
                 </div>
             </div>
             <div class="col-md-6">
@@ -133,15 +118,15 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text">  <i class="nc-icon nc-email-85"></i></span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" >
+                    <input type="text" class="form-control" placeholder="Email" (focus)="focus1=true" (blur)="focus1=false" #email>
                 </div>
             </div>
         </div>
         <label>Message</label>
-        <textarea class="form-control" rows="4" placeholder="What can we help you with?"></textarea>
+        <textarea class="form-control" rows="4" placeholder="What can we help you with?" #message></textarea>
         <div class="row">
-            <div class="col-md-4">
-                <button class="btn btn-primary btn-lg btn-fill">Submit request</button>
+            <div class="col-12">
+                <button style="display: block; margin-left: auto; margin-right: auto;" class="btn btn-primary btn-lg btn-fill" (click)="addUserdata()">Submit request</button>
             </div>
         </div>
       </form>

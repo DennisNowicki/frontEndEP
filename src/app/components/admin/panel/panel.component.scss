@@ -1,3 +1,44 @@
 .panel-container {
   margin-top: 100px;
 }
+.requests{
+  cursor: pointer;
+  border: solid 2px black;
+  border-radius: 10px;
+  text-align: center;
+  background-color: red;
+  color: white;
+  &:hover {
+    color: #51cbce !important;
+  }
+}
+.messages{
+  cursor: pointer;
+  border: solid 2px black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  &:hover {
+    color: #51cbce !important;
+  }
+}
+.statistics{
+  cursor: pointer;
+  border: solid 2px black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  &:hover {
+    color: #51cbce !important;
+  }
+}
+.components{
+  cursor: pointer;
+  border: solid 2px black;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  &:hover {
+    color: #51cbce !important;
+  }
+}

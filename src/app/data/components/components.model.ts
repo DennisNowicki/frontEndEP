@@ -5,6 +5,7 @@ export class Components {
     public src: string,
     public fee: number,
     public minHours: number,
-    public maxHours: number
+    public maxHours: number,
+    public needed: boolean
   ) {}
 }
